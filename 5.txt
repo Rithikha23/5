@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform();" >  
+Name: <input type="text" name="name"><br>  
+What car would you like to buy?:<br>
+ <input type="radio" id="c" value="proton">Proton
+ <input type="radio" id="c" value="honda">Honda  <br>
+What colour do you want on your car?<br>
+<input type="checkbox" id="colour" >Pink
+<input type="checkbox" id="colour" >Blue
+<input type="checkbox" id="colour" >Green<br>
+Other
+<input type="text" id="col" style="height:50px"><br>
+Enter other specifications required for the car:
+<input type="text" id="col" style="height: 50px"><br>
+Tell us how to get in touch with you
+Name:<input type="text" id="na"><br>
+telephone:<input type="text" id="te"><br>
+Email:<input type="text" id="mail"><br>
+  <input type="checkbox" id="con">Please contact me as soon as possible:<br>
+<input type="submit" value="register" id="car">
+</form>  
+<script>
+    function validateform(){
+        var name=document.myform.name.value;  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+var car = document.getElementById("c");
+      if (c.value.length <= 0) {  
+    alert("Gender is required");  
+    gender.focus();  
+    return false;  
+      }
+    var col=document.getElementById("col");
+    if(col.length<10){
+        alert("not valid");
+    }
+    var n=document.getElementById("na");
+    if (n==null || n==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+      }
+   
+   </script>
